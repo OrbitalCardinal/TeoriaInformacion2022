@@ -1,6 +1,6 @@
-# Author: Luis Daniel García Leal
+# Author: Luis Daniel GarcÃ­a Leal
 
-# Tamaño total del deck estandar
+# TamaÃ±o total del deck estandar
 deckE <- 52
 
 # Numero totales de cartas de cada categoria. (Se toman en cuenta cartas como el Joker o el rey)
@@ -12,7 +12,7 @@ cardType <- 4
 # Son el par de cartas que estamos buscando.
 par <- 2
 
-# Se usa la exprexión (cardType + 2) como una representación de las posibles combinaciones
+# Se usa la exprexiÃ³n (cardType + 2) como una representaciÃ³n de las posibles combinaciones
 # Se discriman los valores del posible par anterior de todos los tipos de cartas.
 
 firstParCombination <- cardNum * (cardType + par)
