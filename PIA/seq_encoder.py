@@ -84,8 +84,19 @@ output.close()
 decodedFile = os.path.getsize('decoded_data.txt')
 encodedFile = os.path.getsize('encoded_data.bin')
 
-print('~' * 10, 'TAMAÑO DEL ARCHIVO CODIFICADO: ', encodedFile)
-print('~' * 10, 'TAMAÑO DEL ARCHIVO DE-CODIFICADO: ', decodedFile)
+sizeE = 0
+sizeD = 0 
+for i in RESULT:
+  sizeE += i
+
+for j in range(len(DATA)):
+  sizeD += ord(DATA[j])
+
+print('~' * 10, 'TAMAÑO DEL ARCHIVO DE-CODIFICADO: ', sizeD, "BITS")
+print('~' * 10, 'TAMAÑO DEL ARCHIVO CODIFICADO: ', sizeE, "BITS")
+
+radioCompresion = sizeE/sizeD
+print('~' * 10, 'RADIO DE COMPRESION: ', radioCompresion, " BITS/SIMBOLO")
 
 #GUARDAR TIEMPO TXT
 size = os.path.getsize('data.txt')
