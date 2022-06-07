@@ -85,6 +85,19 @@ output_string = format_compressed_data(RESULT)
 output.write(output_string)
 output.close()
 
+sizeE = 0
+sizeD = 0 
+
+for i in RESULT:
+  for k in i:
+    sizeE += k
+
+for j in range(len(DATA)):
+  sizeD += ord(DATA[j])
+
+print('~' * 10, 'TAMAÑO DEL ARCHIVO DE-CODIFICADO: ', sizeD, "BITS")
+print('~' * 10, 'TAMAÑO DEL ARCHIVO CODIFICADO: ', sizeE, "BITS")
+
 
 encodedFile = os.path.getsize('encoded_data.txt')
 print('~' * 10, 'TAMAÑO DEL ARCHIVO CODIFICADO: ', encodedFile, "Bytes")
