@@ -85,6 +85,9 @@ output_string = format_compressed_data(RESULT)
 output.write(output_string)
 output.close()
 
+decodedFile = os.path.getsize('decoded_data.txt')
+encodedFile = os.path.getsize('encoded_data.bin')
+
 sizeE = 0
 sizeD = 0 
 
